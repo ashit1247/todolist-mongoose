@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -15,7 +15,7 @@ app.use(express.static("public"));
 // const items = ["Buy Food", "Cook Food", "Eat Food"];
 // const workItems = [];
 
-mongoose.connect("mongodb+srv://ashit:Test123@cluster0.wifyg.mongodb.net/todolistDB", {
+mongoose.connect("mongodb+srv://ashit:process.env.PASSWORD@cluster0.wifyg.mongodb.net/todolistDB", {
   useNewUrlParser: true
 });
 
